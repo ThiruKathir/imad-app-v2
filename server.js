@@ -24,7 +24,7 @@ var articleOne = {
 
 function createTemplate (data) {
     var title = data.title;
-    var cate = data.date;
+    var date = data.date;
     var heading = data.heading;
     var content = data.content;
     
@@ -47,7 +47,7 @@ function createTemplate (data) {
                     ${heading}
                 </h3>
                 <div>
-                    ${data}
+                    ${date}
                 </div>
                 <div>
                     ${content}
