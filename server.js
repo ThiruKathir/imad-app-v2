@@ -104,14 +104,14 @@ app.get('/ui/main.js', function (req, res) {
 });
 
 
-app.get('/ui/madi.png', function (req, res) {
+app.get('/ui/madi.png', function (req, res) { // url= /submit-name?name=xxxxxxxxxxxxxxxxx
   res.sendFile(path.join(__dirname, 'ui', 'madi.png'));
 });
 
 var names= [];
-app.get('/submit-name/:name', function(req,res) {
+app.get('/submit-name', function(req,res) {
   // get the name from the request object
-  var name= req.params.name
+  var name= req.qurey.name
   names.push(name);
   //JSON: Javascript Object Notation
   res.send(JSON.stringify(names));
